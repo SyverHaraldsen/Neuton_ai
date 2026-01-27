@@ -1,0 +1,20 @@
+/*
+ * Copyright (c) 2026 Nordic Semiconductor ASA
+ *
+ * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+ */
+
+/ {
+	aliases {
+		imu0 = &accelerometer_hp;
+	};
+};
+
+&uart1 {
+	status = "okay";
+	current-speed = <1000000>;
+};
+
+&accelerometer_hp {
+	status = "okay";
+};

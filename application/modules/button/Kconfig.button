@@ -1,0 +1,31 @@
+#
+# Copyright (c) 2026 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
+menu "Button Module"
+
+config APP_BUTTON_DEBOUNCE_TIME_MS
+	int "Button debounce time in milliseconds"
+	default 50
+	help
+	  The time to debounce the button press.
+
+config APP_BUTTON_DOUBLE_PRESS_TIMEOUT_MS
+	int "Button double press timeout in milliseconds"
+	default 500
+	help
+	  The time to wait for a double press.
+
+config APP_BUTTON_LONG_PRESS_TIMEOUT_MS
+	int "Button long press timeout in milliseconds"
+	default 3000
+	help
+	  The time required for a long press detection.
+
+module = APP_BUTTON
+module-str = Button module
+source "subsys/logging/Kconfig.template.log_config"
+
+endmenu

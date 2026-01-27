@@ -1,0 +1,19 @@
+#
+# Copyright (c) 2026 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
+menu "Application"
+
+rsource "modules/button/Kconfig.button"
+rsource "modules/detection/Kconfig.detection"
+rsource "modules/sampling/Kconfig.sampling"
+
+endmenu
+
+rsource "../external/edge-ai/lib/Kconfig"
+
+menu "Zephyr Kernel"
+source "Kconfig.zephyr"
+endmenu

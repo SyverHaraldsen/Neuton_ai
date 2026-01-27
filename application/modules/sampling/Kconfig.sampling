@@ -1,0 +1,19 @@
+#
+# Copyright (c) 2026 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
+menu "Sampling Module"
+
+config APP_SAMPLING_FREQUENCY_HZ
+	int "Sampling frequency in Hz"
+	default 100
+	help
+	  The frequency to sample the IMU at.
+
+module = APP_SAMPLING
+module-str = Sampling module
+source "subsys/logging/Kconfig.template.log_config"
+
+endmenu
